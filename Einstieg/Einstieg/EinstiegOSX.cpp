@@ -16,6 +16,8 @@
 >>>>>>> Mac version of the first lesson
 #include "MPLSammlung.h"
 
+#include "EinstiegOSX.h"
+
 int a;
 float b;
 

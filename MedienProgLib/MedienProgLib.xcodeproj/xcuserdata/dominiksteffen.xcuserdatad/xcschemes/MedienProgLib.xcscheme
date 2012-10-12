@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7BBBE8711628118900E83D2D"
-               BuildableName = "libMedienProgLib.a"
+               BuildableName = "MedienProgLib.a"
                BlueprintName = "MedienProgLib"
                ReferencedContainer = "container:MedienProgLib.xcodeproj">
             </BuildableReference>
