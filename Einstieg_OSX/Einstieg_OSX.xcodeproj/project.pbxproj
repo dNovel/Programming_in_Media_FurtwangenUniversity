@@ -1,0 +1,239 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BAFF4B1162822DB00BA5A77 /* MedienProgLib_OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAFF4B0162822DB00BA5A77 /* MedienProgLib_OSX.a */; };
+		7BAFF4B41628232A00BA5A77 /* EinstiegOSX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF4B31628232A00BA5A77 /* EinstiegOSX.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7BBBE8881628132100E83D2D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7BAFF4B0162822DB00BA5A77 /* MedienProgLib_OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = MedienProgLib_OSX.a; path = ../MedienProgLib_OSX/Bin/MedienProgLib_OSX.a; sourceTree = "<group>"; };
+		7BAFF4B21628230400BA5A77 /* EinstiegOSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EinstiegOSX.h; sourceTree = "<group>"; };
+		7BAFF4B31628232A00BA5A77 /* EinstiegOSX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EinstiegOSX.cpp; sourceTree = SOURCE_ROOT; };
+		7BBBE88A1628132100E83D2D /* Einstieg_OSX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Einstieg_OSX; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BBBE8871628132100E83D2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BAFF4B1162822DB00BA5A77 /* MedienProgLib_OSX.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BBBE87F1628132100E83D2D = {
+			isa = PBXGroup;
+			children = (
+				7BAFF4B0162822DB00BA5A77 /* MedienProgLib_OSX.a */,
+				7BBBE897162813E000E83D2D /* Headers */,
+				7BBBE88D1628132100E83D2D /* Source */,
+				7BBBE88B1628132100E83D2D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BBBE88B1628132100E83D2D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BBBE88A1628132100E83D2D /* Einstieg_OSX */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BBBE88D1628132100E83D2D /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFF4B31628232A00BA5A77 /* EinstiegOSX.cpp */,
+			);
+			name = Source;
+			path = Einstieg;
+			sourceTree = "<group>";
+		};
+		7BBBE897162813E000E83D2D /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				7BAFF4B21628230400BA5A77 /* EinstiegOSX.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BBBE8891628132100E83D2D /* Einstieg_OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BBBE8941628132100E83D2D /* Build configuration list for PBXNativeTarget "Einstieg_OSX" */;
+			buildPhases = (
+				7BBBE8861628132100E83D2D /* Sources */,
+				7BBBE8871628132100E83D2D /* Frameworks */,
+				7BBBE8881628132100E83D2D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Einstieg_OSX;
+			productName = Einstieg;
+			productReference = 7BBBE88A1628132100E83D2D /* Einstieg_OSX */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BBBE8811628132100E83D2D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Dominik Steffen";
+			};
+			buildConfigurationList = 7BBBE8841628132100E83D2D /* Build configuration list for PBXProject "Einstieg_OSX" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7BBBE87F1628132100E83D2D;
+			productRefGroup = 7BBBE88B1628132100E83D2D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BBBE8891628132100E83D2D /* Einstieg_OSX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BBBE8861628132100E83D2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BAFF4B41628232A00BA5A77 /* EinstiegOSX.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7BBBE8921628132100E83D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		7BBBE8931628132100E83D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		7BBBE8951628132100E83D2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../MedienProgLib/Bin\"",
+					"\"$(SRCROOT)/../MedienProgLib_OSX/Bin\"",
+				);
+				PRODUCT_NAME = Einstieg_OSX;
+				USER_HEADER_SEARCH_PATHS = "/Users/dominiksteffen/GIT/Programming_in_Media_FurtwangenUniversity/**";
+			};
+			name = Debug;
+		};
+		7BBBE8961628132100E83D2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../MedienProgLib/Bin\"",
+					"\"$(SRCROOT)/../MedienProgLib_OSX/Bin\"",
+				);
+				PRODUCT_NAME = Einstieg_OSX;
+				USER_HEADER_SEARCH_PATHS = "/Users/dominiksteffen/GIT/Programming_in_Media_FurtwangenUniversity/**";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BBBE8841628132100E83D2D /* Build configuration list for PBXProject "Einstieg_OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BBBE8921628132100E83D2D /* Debug */,
+				7BBBE8931628132100E83D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BBBE8941628132100E83D2D /* Build configuration list for PBXNativeTarget "Einstieg_OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BBBE8951628132100E83D2D /* Debug */,
+				7BBBE8961628132100E83D2D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BBBE8811628132100E83D2D /* Project object */;
+}
