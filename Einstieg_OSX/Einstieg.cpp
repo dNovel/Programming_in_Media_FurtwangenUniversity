@@ -1,7 +1,7 @@
 // Medienprogrammieren Stunde 1
 
 #include "MPLSammlung.h"
-#include "EinstiegOSX.h"
+#include "Einstieg.h"
 
 int a;
 float b;

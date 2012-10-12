@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7BAFF4B1162822DB00BA5A77 /* MedienProgLib_OSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAFF4B0162822DB00BA5A77 /* MedienProgLib_OSX.a */; };
-		7BAFF4B41628232A00BA5A77 /* EinstiegOSX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF4B31628232A00BA5A77 /* EinstiegOSX.cpp */; };
+		7BAFF4B41628232A00BA5A77 /* Einstieg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFF4B31628232A00BA5A77 /* Einstieg.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,8 +25,8 @@
 
 /* Begin PBXFileReference section */
 		7BAFF4B0162822DB00BA5A77 /* MedienProgLib_OSX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = MedienProgLib_OSX.a; path = ../MedienProgLib_OSX/Bin/MedienProgLib_OSX.a; sourceTree = "<group>"; };
-		7BAFF4B21628230400BA5A77 /* EinstiegOSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EinstiegOSX.h; sourceTree = "<group>"; };
-		7BAFF4B31628232A00BA5A77 /* EinstiegOSX.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EinstiegOSX.cpp; sourceTree = SOURCE_ROOT; };
+		7BAFF4B21628230400BA5A77 /* Einstieg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Einstieg.h; sourceTree = "<group>"; };
+		7BAFF4B31628232A00BA5A77 /* Einstieg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Einstieg.cpp; sourceTree = SOURCE_ROOT; };
 		7BBBE88A1628132100E83D2D /* Einstieg_OSX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Einstieg_OSX; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,7 +63,7 @@
 		7BBBE88D1628132100E83D2D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				7BAFF4B31628232A00BA5A77 /* EinstiegOSX.cpp */,
+				7BAFF4B31628232A00BA5A77 /* Einstieg.cpp */,
 			);
 			name = Source;
 			path = Einstieg;
@@ -72,7 +72,7 @@
 		7BBBE897162813E000E83D2D /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				7BAFF4B21628230400BA5A77 /* EinstiegOSX.h */,
+				7BAFF4B21628230400BA5A77 /* Einstieg.h */,
 			);
 			name = Headers;
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BAFF4B41628232A00BA5A77 /* EinstiegOSX.cpp in Sources */,
+				7BAFF4B41628232A00BA5A77 /* Einstieg.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
