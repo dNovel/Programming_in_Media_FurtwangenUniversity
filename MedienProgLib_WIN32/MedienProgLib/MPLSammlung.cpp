@@ -4,11 +4,7 @@
 
 // Groesse des 'grafischen Arrays'
 const int _ITEMARRAYSIZE = 32;
-
-void f1()
-{
-	printf("Ausgabe von f1! \n");
-}
+char _CurrentStone[_ITEMARRAYSIZE][_ITEMARRAYSIZE] = {};
 
 void GoToPos(int x, int y)
 {
@@ -103,6 +99,73 @@ void AusgabeRaute(int anzahl, char buchstabe, int sx,  int sy)
 				}
 			}
 			//printf("\n");
+		}
+	}
+}
+
+
+// Zeichnet einen Stein an einer beliebigen X und Y Position in die Konsoles
+void Erstelle_Stein(int breite, int hoehe, char buchstabe, int x, int y, int geometryType)
+{
+	if(geometryType == 0)
+	{
+		ClearCurrentArray();
+	}
+	else if(geometryType == 1)
+	{
+		GetViereckArr(breite, hoehe, buchstabe);
+		Zeichne_Stein(x, y);
+	}
+	else if(geometryType == 2)
+	{
+		// Anderer Typ usw ...
+	}
+}
+
+
+// Zeichnet das Stein Array auf die Konsole an der gewuenschten Stelle
+void Zeichne_Stein(int sx, int sy)
+{
+	// Zeichne
+	for(int h=0; h<_ITEMARRAYSIZE; h++)
+	{
+		// GoToPos(sx, sy+h);
+		int tempH = sy+h;
+		for(int b=0; b<_ITEMARRAYSIZE; b++)
+		{
+			GoToPos(sx + b, tempH);
+			char buchstabe = _CurrentStone[h][b];
+			printf("%c", buchstabe);
+		}
+	}
+
+	ClearCurrentArray();
+	GoToPosZero();
+}
+
+
+// Gibt ein Array mit einem Viereck zurueck
+void GetViereckArr(int breite, int hoehe, char buchstabe)
+{
+	for(int h=0; h<hoehe; h++)
+	{
+		for(int b=0; b<breite; b++)
+		{
+			_CurrentStone[h][b] = buchstabe;
+		}
+	}
+}
+
+
+// Loescht das aktuelle Array damit es wieder sauber ist
+void ClearCurrentArray()
+{
+	char *buchstabe = " ";
+	for(int h=0; h<_ITEMARRAYSIZE; h++)
+	{
+		for(int b=0; b<_ITEMARRAYSIZE; b++)
+		{
+			_CurrentStone[h][b] = *buchstabe;
 		}
 	}
 }
