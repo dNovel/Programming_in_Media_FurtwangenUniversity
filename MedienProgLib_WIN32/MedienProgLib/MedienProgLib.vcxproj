@@ -73,10 +73,20 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BlockTetr.h" />
+    <ClInclude Include="LevelTetr.h" />
     <ClInclude Include="MPLSammlung.h" />
+    <ClInclude Include="SpielTetr.h" />
+    <ClInclude Include="SteinTetr.h" />
+    <ClInclude Include="ViewTetr.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BlockTetr.cpp" />
+    <ClCompile Include="LevelTetr.cpp" />
     <ClCompile Include="MPLSammlung.cpp" />
+    <ClCompile Include="SpielTetr.cpp" />
+    <ClCompile Include="SteinTetr.cpp" />
+    <ClCompile Include="ViewTetr.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
