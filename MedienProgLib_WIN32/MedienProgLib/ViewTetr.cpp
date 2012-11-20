@@ -1,30 +1,21 @@
 /*
 	Medienprogrammierung - Dominik Steffen 2012
 */
-
-#include <stdio.h>
-#include <Windows.h>
 #include "ViewTetr.h"
-
-/*
-	Vars
-*/
-int	_Hoehe;
-int _Breite;
-int _ITEMARRAYSIZE;
 
 // Konstruktor
 View::View(int hoehe, int breite)
 {
-	_Hoehe = hoehe;
-	_Breite = breite;
+	this->_Hoehe = hoehe;
+	this->_Breite = breite;
 
 	View::Set_console(_Hoehe, _Breite);
 }
 
-void View::Zeichne(int sx, int sy)
+void View::Zeichne(int x, int y, char c)
 {
-
+	this->GoToPos(x, y);
+	printf("%c", c);
 }
 
 void View::Set_console(int height, int width)
