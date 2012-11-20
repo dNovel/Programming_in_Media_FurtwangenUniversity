@@ -4,6 +4,10 @@
 class Stein
 {
 public:
+	int _Status; // 0 ist bewegbar 1 ist fest
+	int _Farbe;
+	int _FormTyp; // Geometrische Form des Steins
+
 	// Konstruktor
 	Stein();
 	Stein(int status, int farbe, int formtyp);
@@ -21,4 +25,4 @@ private:
 	void Crash();
 	// Destruktor Methode
 	void Clear();
-}
+};

@@ -9,6 +9,12 @@ public:
 	View(int hoehe, int breite);
 	~View();
 private:
-	void Zeichne();
-	static char Spielfeld[20][10];
-}
+	int	_Hoehe;
+	int _Breite;
+
+	void Zeichne(int x, int y);
+	void GoToPos(int x, int y);
+	void GoToPosZero();
+	void Set_console(int height, int width);
+	void ClearScreen();
+};

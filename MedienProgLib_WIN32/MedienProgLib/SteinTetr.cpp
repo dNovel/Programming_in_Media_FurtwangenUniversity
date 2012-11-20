@@ -4,24 +4,12 @@
 #include "SteinTetr.h"
 
 
-/*
-	Vars
-*/
-int _Status; // 0 ist bewegbar 1 ist fest
-int _Farbe;
-int _FormTyp; // Geometrische Form des Steins
-
-
 // Konstruktor
-Stein::Stein()
-{
-}
-
 Stein::Stein(int status, int farbe, int formtyp)
 {
-	_Status = status;
-	_Farbe = farbe;
-	_FormTyp = formtyp;
+	Stein::_Status = status;
+	Stein::_Farbe = farbe;
+	Stein::_FormTyp = formtyp;
 }
 
 Stein::~Stein()
