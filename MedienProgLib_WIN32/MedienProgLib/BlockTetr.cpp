@@ -9,7 +9,12 @@ Block::Block(int x, int y)
 {
 	SetXPos(x);
 	SetYPos(y);
-	SetChar((char)254);
+	SetChar((char)219);
+}
+
+Block::~Block()
+{
+
 }
 
 void Block::Zeichne(View *view)

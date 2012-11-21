@@ -2,9 +2,10 @@
 	Medienprogrammierung - Dominik Steffen 2012
 */
 
-#ifndef __BlockTetr_H__
+#ifdef __BlockTetr_H__
+class Block;
+#else
 #define __BlockTetr_H__
-
 #include "ViewTetr.h"
 
 class Block
@@ -12,7 +13,7 @@ class Block
 public:
 	Block();
 	Block(int x, int y);
-	~Block();
+	~Block(); // einmal hier
 
 	// Getter
 	int GetXPos();

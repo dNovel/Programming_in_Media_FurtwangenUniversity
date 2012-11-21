@@ -2,7 +2,9 @@
 	Medienprogrammierung - Dominik Steffen 2012
 */
 
-#ifndef __ViewTetr_H__
+#ifdef __ViewTetr_H__
+class View;
+#else
 #define __ViewTetr_H__
 
 #include <stdio.h>
