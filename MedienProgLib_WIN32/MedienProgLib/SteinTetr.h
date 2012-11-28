@@ -30,11 +30,11 @@ public:
 	void Zeichne();
 	// Laesst den Stein fallen
 	void Fallen();
-private:
+	// Bewegt den Stein durch Benutzereingabe
+	void Bewegen(int mDirection);
 	// Dreht den Stein durch Benutzereingabe
 	void Drehen();
-	// Bewegt den Stein durch Benutzereingabe
-	void Bewegen();
+private:
 	// Kolission mit unterem Stein? @TODO:
 	void Crash();
 	// Destruktor Methode
