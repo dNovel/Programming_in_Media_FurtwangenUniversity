@@ -27,9 +27,7 @@ void Block::Zeichne(View *view)
 
 void Block::Fallen()
 {
-	int newY = GetYPos();
-	++newY;
-	SetYPos(newY);
+	_y += 1;
 }
 
 int Block::GetXPos()

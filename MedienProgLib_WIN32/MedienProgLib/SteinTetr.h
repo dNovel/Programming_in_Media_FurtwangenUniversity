@@ -15,9 +15,11 @@ class Stein;
 class Stein
 {
 public:
-	int _Status; // 0 ist bewegbar 1 ist fest
+	bool _Status; // 0 ist bewegbar 1 ist fest
 	int _Farbe;
 	int _FormTyp; // Geometrische Form des Steins
+	int _x, _y;
+
 	//View
 	View *_view;
 	// Liste mit Steinen
@@ -34,6 +36,11 @@ public:
 	void Bewegen(int mDirection);
 	// Dreht den Stein durch Benutzereingabe
 	void Drehen();
+	bool GetStatus();
+
+	// pruefe kollision
+	bool CheckStoneForCollision(Stein *fallingStone);
+	void GetBlockList(std::list<Block> &outList);
 private:
 	// Kolission mit unterem Stein? @TODO:
 	void Crash();

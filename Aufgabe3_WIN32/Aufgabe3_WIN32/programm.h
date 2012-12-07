@@ -1,6 +1,5 @@
-// Spiel Logik
-#include "SteinTetr.h"
+// Spiel erzeugen
+#include "SpielTetr.h"
+
 
 int main();
-void update(Stein *stein);
-int getKeyboardInput();
