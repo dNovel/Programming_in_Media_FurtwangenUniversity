@@ -18,9 +18,11 @@ private:
 	bool CheckForCollision();
 	long GetClockNanoTime();
 	long GetClockMSTime();
+	int RandomStein();
 
 	std::list<Stein> _spielSteine;
 	std::list<Stein>::iterator _spielSteineIt;
+	std::list<Block>::iterator _aktuellSteinIt;
 	Stein *_steinNeu;
 
 	bool _runGame;

@@ -30,5 +30,7 @@ public:
 	void Drehen();
 	bool GetStatus();
 	void SetStatus(bool val);
+	int GetY();
+	int GetX();
 };
 #endif

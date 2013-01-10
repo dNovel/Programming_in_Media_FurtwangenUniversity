@@ -5,9 +5,7 @@
 
 int main()
 {
-	
 	Spiel *tetrisSpiel = new Spiel();
 	tetrisSpiel->Run();
-	
 	return 0;
 }

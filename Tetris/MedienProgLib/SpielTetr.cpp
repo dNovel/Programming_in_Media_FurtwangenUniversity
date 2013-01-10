@@ -10,7 +10,8 @@ Spiel::Spiel()
 {
 	_runGame = true;
 	_viewNeu = new View(40, 30); // h und b
-	_steinNeu = new Stein(0, _viewNeu);
+
+	_steinNeu = new Stein(RandomStein(), _viewNeu);
 }
 
 Spiel::~Spiel()
@@ -20,46 +21,16 @@ Spiel::~Spiel()
 
 void Spiel::Run()
 {
-	// Hole die aktuelle Zeit seit ... in ms
-	long lastTime = GetClockMSTime();
-	long lastTimer = GetClockMSTime();
-	double msPerTick =  1000 / 60.0;
-
-	double delta = 0;
-	int frames = 0;
-	int updates = 0;
-
 	while(_runGame)
 	{
-		long now = GetClockMSTime();
-		delta += (now - lastTime) / msPerTick;
-		lastTime = now;
-
 		// Input all the time
 		UInputs();
-
-		while (delta >= 1)
-		{
-			updates++;
-			delta-=1;
-		}
 		// Render all the time
 		Render();
-		frames++;
-		
-		long timeUp = GetClockMSTime() - lastTimer;
-		if(timeUp > 1000)
-		{
-			lastTimer += 1000;
-			
-			// Spiele Logik
-			Update();
-
-			frames = 0;
-			updates = 0;
-		}
+		Update();
+		Sleep(50);
 	}
-	std::getchar();
+	//sstd::getchar();
 }
 
 
@@ -68,12 +39,13 @@ void Spiel::Update()
 {
 	if(_steinNeu->GetStatus())
 	{
-		_steinNeu->Fallen();
+		if(!CheckForCollision())
+			_steinNeu->Fallen();
 	}
 	else
 	{
 		_spielSteine.push_back(*_steinNeu);
-		_steinNeu = new Stein(0, _viewNeu);
+		_steinNeu = new Stein(RandomStein(), _viewNeu);
 	}
 }
 
@@ -82,28 +54,56 @@ void Spiel::Update()
 void Spiel::Render()
 {		
 	// Zeichne alles
+	_viewNeu->ClearScreen();
 	_steinNeu->Zeichne();
+	
 	for(_spielSteineIt = _spielSteine.begin(); _spielSteineIt != _spielSteine.end(); _spielSteineIt++)
 	{
 		_spielSteineIt->Zeichne();
 	}
-
-	_viewNeu->ClearScreen();
-}
-
-long Spiel::GetClockNanoTime()
-{
-	return time(NULL) * 1000000000;
-}
-
-long Spiel::GetClockMSTime()
-{
-	return time(NULL) * 1000;
 }
 
 // Prueft auf Kollision returned true wenn kollidiert, false wenn nicht
 bool Spiel::CheckForCollision()
 {
+	//aktuellerstein->Gety
+	//vergleiche each vonliste mit aktuell
+		//wenn y und 1 x gleich dann setze status falsch
+	int y = _steinNeu->GetY();
+	int x = _steinNeu->GetX();
+
+	for(_spielSteineIt = _spielSteine.begin(); _spielSteineIt != _spielSteine.end(); _spielSteineIt++)
+	{
+		int yL = _spielSteineIt->GetY();
+		int xL = _spielSteineIt->GetX();
+		
+		/*
+		*	Gehe durch die Liste der bloecke eines steins und vergleiche die positionen von x und y
+		*	Vergleiche ersten Block mit allen 4 ...
+		*/
+		for (_aktuellSteinIt = _steinNeu->_BlockList.begin(); _aktuellSteinIt != _steinNeu->_BlockList.end(); _aktuellSteinIt++)
+		{
+			// Hier block von dem nun genutzen spielstein durchgehen 
+			for()
+			{
+				int xFall = _aktuellSteinIt->GetXPos();
+				int yFall = _aktuellSteinIt->GetYPos();
+
+				if(xFall == xL && yFall+2 == yL)
+				{
+					_steinNeu->SetStatus(false);
+					return true;
+				}
+			}
+		}
+
+		if(y+2 == yL && x == xL)
+		{
+			_steinNeu->SetStatus(false);
+			return true;
+		}
+
+	}
 	return false;
 }
 
@@ -137,7 +137,7 @@ void Spiel::UInputs()
 				break;
 			case 80: // [ v ]
 				// Stein bewegen...
-				_steinNeu->Bewegen(3);
+				//_steinNeu->Bewegen(3);
 				break;
 			}
 			break;
@@ -157,4 +157,13 @@ int Spiel::GetKeyboardInput()
 			returnVal=256+getch();
 	}
 	return returnVal;
+}
+
+
+int Spiel::RandomStein()
+{
+	int typrandom;
+	srand(static_cast<unsigned>(time(0)));
+	typrandom = rand() & 7;
+	return typrandom;
 }

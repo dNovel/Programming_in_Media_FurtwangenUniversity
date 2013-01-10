@@ -19,12 +19,18 @@ public:
 	~View();
 	void Zeichne(int, int, char);
 	void ClearScreen();
+	void ClearDrawBuffer();
 	int GetHeight();
 
 private:
-	int	_Hoehe;
-	int _Breite;
+	//int	_Hoehe;
+	//int _Breite;
+	static const int _Hoehe = 40;
+	static const int _Breite = 30;
 	int _ITEMARRAYSIZE;
+
+	//HANDLE hConsoleOutput;
+	//CHAR_INFO lpBuffer[_Breite * _Hoehe];
 
 	void GoToPos(int x, int y);
 	void GoToPosZero();
