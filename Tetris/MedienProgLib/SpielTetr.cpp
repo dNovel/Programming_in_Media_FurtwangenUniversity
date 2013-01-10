@@ -84,8 +84,8 @@ bool Spiel::CheckForCollision()
 		for (_aktuellSteinIt = _steinNeu->_BlockList.begin(); _aktuellSteinIt != _steinNeu->_BlockList.end(); _aktuellSteinIt++)
 		{
 			// Hier block von dem nun genutzen spielstein durchgehen 
-			for()
-			{
+			//for()
+			//{
 				int xFall = _aktuellSteinIt->GetXPos();
 				int yFall = _aktuellSteinIt->GetYPos();
 
@@ -94,7 +94,7 @@ bool Spiel::CheckForCollision()
 					_steinNeu->SetStatus(false);
 					return true;
 				}
-			}
+			//}
 		}
 
 		if(y+2 == yL && x == xL)

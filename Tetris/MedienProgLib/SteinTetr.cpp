@@ -166,15 +166,13 @@ void Stein::Bewegen(int mDirection)
 
 void Stein::Drehen()
 {
-	/*
-	for(listIterator = _BlockList.begin(); listIterator != _BlockList.end(); listIterator++)
+	for(_blockListIt = _BlockList.begin(); _blockListIt != _BlockList.end(); _blockListIt++)
 	{
 		// Drehe Stein um 90grad im uzs
-		int newX = listIterator->GetYPos();
-		int newY = (listIterator->GetXPos() * -1);
+		int newX = _blockListIt->GetYPos();
+		int newY = (_blockListIt->GetXPos() * -1);
 		// Vorherig - neu = diff ... dann diff + aktuell
 	}
-	*/
 }
 
 void Stein::Fallen()
